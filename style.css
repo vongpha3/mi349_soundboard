@@ -1,7 +1,39 @@
-.buttons {
+body {
 
     display: flex;
     flex-direction: row;
+    grid-gap: 10px;
+
+}
+
+.remote {
+
+    display: flex;
+    flex-direction: column;
     grid-gap: 5px;
+    background-color: #a0a0a0;
+    padding: 10px;
+    border: #454545 3px solid;
+    box-shadow: 3px 3px;
+
+}
+
+.top {
+
+    display: flex;
+    flex-direction: row;
+    grid-gap: 13px;
+
+}
+
+#on {
+
+    background-color: #007b13;
+
+}
+
+#off {
+
+    background-color: #c60000;
 
 }
