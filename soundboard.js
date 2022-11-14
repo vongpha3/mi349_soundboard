@@ -9,6 +9,7 @@ let chainsaw = new Audio("sounds/chainsaw.wav");
 let man =  new Audio("sounds/scream_male.wav");
 let motor =  new Audio("sounds/motorcycle2.wav");
 let click =  new Audio("sounds/click_x.wav");
+let song =  new Audio("sounds/song.mp3");
 
 let tvImage = document.getElementById("tv");
 let dogImage = "images/dogTV.png";
@@ -17,6 +18,7 @@ let manImage = "images/manTV.png";
 let motorImage = "images/motorTV.png";
 let onImage = "images/blankTV.png";
 let offImage = "images/offTV.png";
+let songImage = "images/songTV.png";
 
 function playSound(button) {
 
@@ -44,6 +46,12 @@ function playSound(button) {
 
         audio = motor;
         tvImage.src = motorImage;
+
+    }
+    else if (id == "sound5") {
+
+        audio = song;
+        tvImage.src = songImage;
 
     }
 
@@ -88,7 +96,7 @@ for (let j = 0; j < switches.length; j++) {
         audio.pause();
         audio.currentTime = 0;
         click.play();
-        
+
         controlTV(switches[j]);
 
     });
