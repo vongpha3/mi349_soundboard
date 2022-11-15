@@ -20,6 +20,8 @@ let onImage = "images/blankTV.png";
 let offImage = "images/offTV.png";
 let songImage = "images/songTV.png";
 
+let tvOn = false;
+
 function playSound(button) {
 
     let id = button.id;
@@ -65,12 +67,14 @@ function controlTV(control) {
 
     if (id == "on") {
 
+        tvOn = true;
         tvImage.src = onImage;
 
     }
     else if (id == "off") {
 
         audio.pause();
+        tvOn = false;
         tvImage.src = offImage;
 
     }
@@ -83,7 +87,11 @@ for (let i = 0; i < buttons.length; i++) {
 
         audio.pause();
         audio.currentTime = 0;
-        playSound(buttons[i]);
+        if (tvOn) {
+
+            playSound(buttons[i]);
+
+        }
 
     });
 
