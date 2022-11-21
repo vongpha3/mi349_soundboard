@@ -50,12 +50,6 @@ function playSound(button) {
         tvImage.src = motorImage;
 
     }
-    else if (id == "sound5") {
-
-        audio = song;
-        tvImage.src = songImage;
-
-    }
 
     audio.play();
 
